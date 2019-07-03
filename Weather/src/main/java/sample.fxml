@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="498.0" prefWidth="775.0" GridPane.rowIndex="1">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Text layoutX="336.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather">
+                     <font>
+                        <Font size="27.0" />
+                     </font></Text>
+                        <TextField fx:id="cityName" layoutX="97.0" layoutY="96.0" />
+                        <Text layoutX="24.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+                        <TextField fx:id="countryName" layoutX="97.0" layoutY="152.0" />
+                        <Text layoutX="24.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" wrappingWidth="60.13671875" />
+                        <Button fx:id="getWeather" layoutX="411.0" layoutY="80.0" mnemonicParsing="false" onAction="#getDayWeather" text="Get Weather" />
+                        <Button fx:id="getForecast" layoutX="412.0" layoutY="127.0" mnemonicParsing="false" onAction="#GetFiveDaysForecast" text="Get Forecast" />
+                  <Label fx:id="label1" layoutX="113.0" layoutY="6.0" prefHeight="17.0" prefWidth="142.0" textFill="#f50a0a" />
+                  <Label fx:id="label2" layoutX="528.0" layoutY="6.0" prefHeight="17.0" prefWidth="142.0" textFill="#f50a0a" />
+                  <Button fx:id="chart" layoutX="611.0" layoutY="126.0" mnemonicParsing="false" onAction="#showChart" text="Show Chart" />
+                  <Button fx:id="history" layoutX="411.0" layoutY="174.0" mnemonicParsing="false" onAction="#getHistory" text="Get History" />
+                    </children>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="950.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                        <Text layoutX="14.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature" />
+                        <Text layoutX="14.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pressure" />
+                        <Text layoutX="12.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Humidity" />
+                        <Text layoutX="14.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wind" />
+                        <TextField fx:id="text6" layoutX="102.0" layoutY="116.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text7" layoutX="102.0" layoutY="138.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text8" layoutX="102.0" layoutY="161.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text9" layoutX="102.0" layoutY="184.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text10" layoutX="102.0" layoutY="207.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text11" layoutX="239.0" layoutY="115.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text12" layoutX="239.0" layoutY="138.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text13" layoutX="239.0" layoutY="161.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text14" layoutX="239.0" layoutY="183.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text15" layoutX="239.0" layoutY="206.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text16" layoutX="382.0" layoutY="116.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text17" layoutX="382.0" layoutY="138.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text18" layoutX="382.0" layoutY="161.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text19" layoutX="382.0" layoutY="184.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text20" layoutX="382.0" layoutY="207.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text21" layoutX="522.0" layoutY="116.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text22" layoutX="522.0" layoutY="138.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text23" layoutX="522.0" layoutY="161.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text24" layoutX="522.0" layoutY="183.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text25" layoutX="522.0" layoutY="206.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text26" layoutX="660.0" layoutY="116.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text27" layoutX="660.0" layoutY="138.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text28" layoutX="660.0" layoutY="159.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text29" layoutX="660.0" layoutY="184.0" prefHeight="26.0" prefWidth="94.0" />
+                        <TextField fx:id="text30" layoutX="660.0" layoutY="206.0" prefHeight="26.0" prefWidth="94.0" />
+                  <ImageView fx:id="icon2" fitHeight="63.0" fitWidth="83.0" layoutX="110.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="icon3" fitHeight="63.0" fitWidth="83.0" layoutX="253.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="icon4" fitHeight="63.0" fitWidth="82.0" layoutX="394.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></ImageView>
+                  <ImageView fx:id="icon5" fitHeight="63.0" fitWidth="83.0" layoutX="531.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="icon6" fitHeight="63.0" fitWidth="83.0" layoutX="668.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="description" alignment="CENTER" layoutX="265.0" layoutY="5.0" prefHeight="38.0" prefWidth="244.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                    </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+</GridPane>
